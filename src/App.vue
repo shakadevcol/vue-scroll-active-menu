@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <VueScrollActiveMenu tag="nav" :offset="72">
+		<div class="container">
+			<ul>
+				<li class="home"><a class="scroll-active-item home active" href="#home">Home</a></li>
+				<li ><a class="scroll-active-item about" href="#about">About</a></li>
+				<li ><a class="scroll-active-item contact" href="#contact">Contact</a></li>
+				<li ><a class="scroll-active-item footer" href="#footer">Footer</a></li>
+			</ul>	    		
+		</div>
+    </VueScrollActiveMenu>
+
+	<div>
+		<section class="scroll-active-section" id="home">
+		<h1>Home</h1>
+		</section>
+		<section class="scroll-active-section" id="about">
+		<h1>About</h1>
+		</section>
+		<section class="scroll-active-section" id="contact">
+		<h1>Contact</h1>
+		</section>
+		<section class="scroll-active-section" id="footer">
+		<h1>Footer</h1>
+		</section>
+		</div>
+	</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import '@/assets/css/app.css';
+import VueScrollActiveMenu from './components/VueScrollActiveMenu.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    VueScrollActiveMenu
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
