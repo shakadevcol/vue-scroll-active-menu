@@ -1,4 +1,4 @@
-# sergio-vue-scroll-active-menu
+# vue-scroll-active-menu
 
 ## Project setup
 ```
